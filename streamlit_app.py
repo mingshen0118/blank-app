@@ -12,4 +12,4 @@ G2= st.slider("Your Second Period Grade", 0, 20, 10)
 
 if st.button("Predict Final Grade"):
     average = (G1 + G2) / 2
-    st.write(f"Your Predicted Final Grade is: {average}")
+    st.write(f"Congratulations! 🎉 Your Predicted Final Grade is: {average}")
