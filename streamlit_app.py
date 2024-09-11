@@ -1,16 +1,15 @@
 
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("Predict Your Final Grade 💯")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "Please provide the following information!"
 )
-st.write(
-    "Let's start building! For help, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
-failures = st.number_input("Number of past class failures", min_value=0, max_value=4)
-higher = st.selectbox('Wants to take higher education?', ('Yes', 'No'))
+failures = st.number_input("Number of Past Class Failures", min_value=0, max_value=4)
+higher = st.selectbox('Want To Take Higher Education?', ('Yes', 'No'))
 G1= st.slider("Your First Period Grade", 0, 20, 10)
 G2= st.slider("Your Second Period Grade", 0, 20, 10)
 
-st.button("Predict Final Grade")
+if st.button("Predict Final Grade"):
+    average = (G1 + G2) / 2
+    st.write(f"Your Predicted Final Grade is: {average}")
